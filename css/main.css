@@ -1,0 +1,238 @@
+html {
+	font-family: "Lato", sans-serif;
+	min-height: 100vh;
+}
+
+.hide {
+	position: absolute;
+	top: -10px;
+	left: -10px;
+	overflow: hidden;
+	width: 10px;
+	height: 10px;
+}
+
+.body {
+	background: #1c2229 url(../img/background-mobile.jpg) top center no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	min-height: 100vh;
+}
+
+.page {
+	min-height: 100vh;
+	background: rgba(28,34,41, .85);
+	display: flex;
+	flex-direction: column;
+}
+
+.header {
+	background: #121212;
+	height: 35px;
+	display: flex;
+	align-items: center;
+}
+
+.header-image {
+	margin-left: 10px;
+	width: 14px;
+	height: 14px;
+}
+
+.main {
+	padding: 20px;
+	flex: 1 100%;
+}
+
+.title {
+	color: #f0e6d2;
+	text-transform: uppercase;
+	font-size: 24px;
+	padding: 20px 0 30px;
+	margin: 0;
+}
+
+.game-list {
+	width: 100%;
+	list-style: none;
+	padding: 0;
+	margin: 0 0 30px 0;
+	border-bottom: 1px solid #444747;
+	overflow: hidden;
+}
+
+.game-list-item {
+	appearance: none;
+	background: none;
+	border: none;
+	font-size: 13px;
+	text-transform: uppercase;
+	color: #c8aa6e;
+	padding: 0;
+	margin: 0 20px 5px 0;
+	float: left;
+	cursor: pointer;
+}
+
+.game-list-item-selected {
+	color: #f0e6d2;
+}
+
+.loading-indicator {
+	background: url(../img/ajax-loader.gif);
+	background-size: cover;
+	width: 16px;
+	height: 16px;
+}
+
+.team {
+	padding-bottom: 30px;
+}
+
+.team-meta {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+
+.team-names {
+	flex: 1;
+}
+
+.team-short-name {
+	float: left;
+	margin: 0 5px 0 0;
+	padding-right: 5px;
+	font-weight: bold;
+	border-right: 1px solid #a09b8c;
+}
+
+.team-short-name,
+.team-name {
+	font-size: 14px;
+	font-weight: bold;
+	color: #a09b8c;
+}
+
+.team-name {
+	margin: 0;
+}
+
+.victory-text,
+.defeat-text {
+	clear: both;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin: 0;
+}
+
+.victory-text {
+	color: #0296aa;
+}
+
+.defeat-text {
+	color: #be1e37;
+}
+
+.results-table {
+	width: 100%;
+	max-width: 800px;
+	border-collapse: collapse;
+}
+
+.participant {
+	border-bottom: 1px solid #444747;
+}
+
+.participant-name,
+.participant-stats,
+.participant-points,
+.participant-score {
+	display: block;
+	padding: 5px 0;
+}
+
+.participant-name {
+	color: #9b9b9b;
+	font-size: 13px;
+}
+
+.participant-stats {
+	text-align: left;
+}
+
+.participant-points {
+	text-align: center;
+}
+
+.participant-score {
+	text-align: right;
+}
+
+.participant-stats,
+.participant-points,
+.participant-score {
+	width: 33.3%;
+	float: left;
+	font-size: 13px;
+	color: #f0e6d2;
+}
+
+.footer {
+	padding: 10px 20px;
+	color: #a09b8c;
+	font-size: 13px;
+}
+
+@media (min-width: 450px) {
+	.body {
+		background-image: url(../img/background.jpg);
+	}
+
+	.title {
+		font-size: 38px;
+	}
+
+	.team-meta {
+		display: block;
+	}
+
+	.team-short-name {
+		padding: 0;
+		font-size: 18px;
+		color: #c8aa6e;
+		border-right: none;
+	}
+
+	.team-name {
+		font-size: 18px;
+		color: #f0e6d2;
+	}
+
+	.victory-text,
+	.defeat-text {
+		font-size: 22px;
+	}
+
+	.participant {
+		border-bottom: none;
+	}
+
+	.participant-name {
+		width: 50%;
+	}
+
+	.participant-name,
+	.participant-stats,
+	.participant-points,
+	.participant-score {
+		display: table-cell;
+	}
+
+	.participant-stats,
+	.participant-points,
+	.participant-score {
+		text-align: center;
+	}
+}

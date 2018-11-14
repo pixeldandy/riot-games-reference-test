@@ -1,0 +1,95 @@
+<!doctype html>
+<html class="no-js" lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>Riot Games Technical Exercise</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+
+	<body class="body">
+		<div class="page">
+			<header class="header">
+				<img srcset="img/logo.png 1x, img/logo-2x.png 2x" class="header-image" alt="League of Legends logo">
+			</header>
+
+			<main class="main">
+				<h1 class="title">Vienna Challengers Arena</h1>
+
+				<nav>
+					<ul class="game-list">
+						<li>
+							<button
+								type="button"
+								class="game-list-item game-list-item-selected js-game-list-item"
+								tabindex="0"
+								data-game="1">Game 1</button>
+						</li>
+						<li>
+							<button
+								type="button"
+								class="game-list-item js-game-list-item"
+								tabindex="0"
+								data-game="2">Game 2</button>
+						</li>
+					</ul>
+				</nav>
+
+				<noscript>This page requires JavaScript</noscript>
+
+				<div id="loading"></div>
+
+				<div id="victory-team"></div>
+				<div id="defeat-team"></div>
+			</main>
+
+			<footer class="footer">
+				<p>© 2018 Riot Games, Inc. All rights reserved.</p>
+			</footer>
+		</div>
+
+		<script id="template-loading" type="text/template">
+			<div class="loading-indicator"></div>
+		</script>
+
+		<script id="template-table" type="text/template">
+			<div class="team">
+				<div class="team-meta">
+					<div class="team-names">
+						<p class="team-short-name">{{shortName}}</p>
+						<h2 class="team-name">{{name}}</h2>
+					</div>
+					{{#isWinner}}<p class="victory-text">Victory</p>{{/isWinner}}
+					{{^isWinner}}<p class="defeat-text">Defeat</p>{{/isWinner}}
+				</div>
+				<table class="results-table">
+					<thead class="hide">
+						<tr>
+							<td>Name</td>
+							<td>Stats</td>
+							<td>Points Earned</td>
+							<td>Total Score</td>
+						</tr>
+					</thead>
+					<tbody>
+						{{#participants}}
+						<tr class="participant">
+							<td class="participant-name">{{name}}</td>
+							<td class="participant-stats">{{stats}}</td>
+							<td class="participant-points">{{pointsEarned}}</td>
+							<td class="participant-score">{{totalScore}}</td>
+						</tr>
+						{{/participants}}
+					</tbody>
+				</table>
+			</div>
+		</script>
+
+		<script src="js/vendor/mustache-3.0.1.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
