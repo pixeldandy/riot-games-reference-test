@@ -58,7 +58,7 @@ function populateTemplates(data) {
 
 function load(game) {
 	showLoadingIndicator()
-	getRemoteJSON("http://192.168.1.90:3000/game/" + (game || "1")).then(data => {
+	getRemoteJSON("https://riot-games-technical-exercise.herokuapp.com/game/" + (game || "1")).then(data => {
 		populateTemplates(data)
 		hideLoadingIndicator()
 	})
