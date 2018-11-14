@@ -2,6 +2,7 @@
   "name": "riot-games-technical-exercise-example",
   "version": "1.0.0",
   "description": "Example reference test for the Riot Games Front-End Technical Exercise",
+	"main": "index.js",
   "scripts": {
     "start": "http-server",
     "build": "gulp"
@@ -10,7 +11,9 @@
     "type": "git",
     "url": "https://github.com/riotgameseurope/front-end-technical-exercise-example.git"
   },
-  "dependencies": {},
+  "dependencies": {
+    "node-static": "^0.7.11"
+  },
   "devDependencies": {
     "@babel/core": "^7.1.6",
     "@babel/preset-env": "^7.1.6",
